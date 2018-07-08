@@ -1,0 +1,77 @@
+<!-- Template for the modal view that appears when clicking on a brother profile -->
+
+<i class="fa fa-times-circle fa-lg close-button" data-dismiss="modal" aria-hidden="true"></i>
+<div class="row">
+    <div class="col-12 profile-title-area">
+        <h4 class="profile-title">{{firstName}} {{lastName}}</h4>
+    </div>
+</div>
+<div class="row no-gutters">
+    <div class="profile-picture-area col-lg-4 col-md-6 col-sm-12 profileColumn">
+    </div>
+    <div class="infoRowOne col-4 profileColumn">
+        <div class="generalInformation">
+            {{#if ecPosition}}
+                <p class="infoRow"><span class="infoLabel">EC Position: </span>{{ecPosition}}</p>
+            {{/if}}
+            <p class="infoRow"><span class="infoLabel">Class: </span>{{class}}</p>
+            <p class="infoRow"><span class="infoLabel">Graduation Year: </span>{{gradYear}}</p>
+            <div class="infoBlock coopInformation"><span class="infoLabel">Major(s):</span>
+                <ul class="major-list">
+                    {{#each majors}}
+                        <li class="major-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{#if minor}}
+                <div class="infoBlock coopInformation"><span class="infoLabel">Minors(s):</span>
+                    <ul class="mainor-list">
+                        {{#each minors}}
+                            <li class="minor-item">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/if}}
+            <p class="infoRow"><span class="infoLabel">Hometown: </span>{{hometown}}</p>
+        </div>
+        <div class="infoBlock coopInformation"><span class="infoLabel">Co-op(s):</span>
+            <ul class="coop-list">
+                {{#each coops}}
+                    <li class="coop-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="infoRowTwo col-4 profileColumn">
+        {{#if studyAbroads}}
+            <div class="infoBlock coopInformation"><span class="infoLabel">Study Abroad(s):</span>
+                <ul class="studyabroad-list">
+                    {{#each studyAbroads}}
+                        <li class="studyabroad-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+        {{#if funfacts}}
+            <div class="infoBlock coopInformation"><span class="infoLabel">Funfacts:</span>
+                <ul class="funfact-list">
+                    {{#each funfacts}}
+                        <li class="funfact-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+        {{#if hobbies}}
+            <div class="infoBlock coopInformation"><span class="infoLabel">Hobbies:</span>
+                <ul class="hobbies-list">
+                    {{#each hobbies}}
+                        <li class="hobby-item">{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+        <div class="contactBlock linkInformation">
+
+        </div>
+    </div>
+</div>

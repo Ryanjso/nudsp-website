@@ -1,0 +1,202 @@
+/* Styling information for both zoomed out and zoomed in profiles */
+
+/* Zoomed out profile view styling */
+.brother-profiles
+  margin: 5vw
+  max-width: 100vw
+  width: 90vw
+
+  .profile-wrapper
+    display: inline-block
+    text-align: left
+    overflow: hidden
+    margin: 4vh 0
+
+    .brother-profile
+      height: 360px
+      width: 270px
+      display: inline-block
+      overflow: hidden
+      border: gray solid 1px
+      position: relative
+      margin: auto
+
+      .profile-description
+        position: absolute
+        margin: 0
+        top: 0
+        height: 100%
+        width: 100%
+        opacity: 0
+        background: rgba(0, 0, 0, 0.6)
+        color: white
+        padding: 12% 10%
+        overflow: hidden
+        -moz-transition: all 0.4s ease-in-out 0s
+        -webkit-transition: all 0.4s ease-in-out 0s
+        transition: all 0.4s ease-in-out 0s
+        user-select: none
+
+        .profileitem
+          pointer-events: none
+
+        .ecposition
+          margin: 0
+          text-align: center
+
+        .name
+          padding-bottom: 5%
+          text-align: center
+
+        .moreinfo
+          padding-top: 5%
+          text-align: center
+
+      .profile-description:hover
+        opacity: 1
+
+      .profile-picture
+        height: inherit
+        width: inherit
+        max-width: 100%
+
+/* Zoomed in profile view styling */
+
+/* Contains all tbe styling information for the detailed profile that display's when a user clicks a brother image */
+
+.no-padding
+  padding: 0
+
+// Base properties for the Detailed Profile
+.modal.fade
+  opacity: 1
+
+.modal.fade .modal-dialog
+  -webkit-transform: translate(0)
+  -moz-transform: translate(0)
+  transform: translate(0)
+
+.modal
+  text-align: center
+  padding: 0!important
+
+  .modal-dialog
+    display: inline-block
+    margin: auto
+    vertical-align: middle
+
+
+    .modal-content
+      padding: 4%
+      height: 100%
+      border-radius: 0
+      border: solid rgba(127, 140, 141,0.75) 2px
+      cursor: default
+      user-select: none
+
+      /* All modal background information */
+      background: rgba(255,255,255,1)
+      background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(237,239,239,1) 47%, rgba(218,222,222,1) 100%)
+      background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(237,239,239,1) 47%, rgba(218,222,222,1) 100%)
+      background: -o-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(237,239,239,1) 47%, rgba(218,222,222,1) 100%)
+      background: -ms-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(237,239,239,1) 47%, rgba(218,222,222,1) 100%)
+      background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(237,239,239,1) 47%, rgba(218,222,222,1) 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dadede', GradientType=1 )
+
+      .close-button
+        position: absolute
+        top: 0
+        right: 0
+        margin: 1rem
+        color: rgba(127, 140, 141, 1.0)
+        cursor: pointer
+        z-index: 1
+
+      .close-button:hover
+        color: black
+
+      .profileColumn
+        padding: .75rem
+
+      .profile-picture-area
+        display: flex
+        flex-direction: column
+
+      .profile-title
+        flex: 1 1 auto
+        font-weight: bold
+        margin-bottom: 2%
+
+      .infoBlock
+        text-align: left
+
+        p
+          padding-left: .75rem
+
+        span
+          font-weight: bold
+
+        ul
+          padding: 0 0 0 1rem
+
+      .infoRowTwo
+        display: flex
+        flex-direction: column
+
+        .textContent
+          flex: 1 1 auto
+
+        .contactBlock
+          flex: 0 0 auto
+          background-color: gray
+          height: 20%
+          width: 100%
+
+      .infoRow
+        font-size: .9em
+        text-align: left
+
+      .infoLabel
+        font-weight: bold
+
+      .profileColumn
+        height: 100%
+        flex: none
+
+      .profile-picture
+        border: solid rgba(127, 140, 141,0.85) 2px
+        opacity: 0.9
+        margin: auto
+
+.modal:before
+  content: ''
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+
+.close
+  position: absolute
+  top: 0
+  right: 0
+  padding: 1%!important
+
+// Detailed Profile properties specific to small sized screens (phones)
+@media all and (max-width: 750px)
+
+  .profile-picture
+    height: 75%
+    width: 75%
+
+
+  .search-buttons
+    max-width: 100%
+
+
+// Detailed Profile properties when the screen size is large (desktop screens)
+@media all and (min-width: 1400px)
+
+  .profile-picture
+    height: 100%
+    width: 100%
+
+

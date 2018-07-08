@@ -1,0 +1,152 @@
+/* Provides the styling for the navbar template */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC')
+
+// General navbar properties, properties apply to small screens (phones), but also propagate to other states
+.navbar-custom
+  overflow: hidden
+  background-color: #2c3e50
+  color: #ecf0f1
+  font-family: 'Playfair Display SC', Serif
+  z-index: 1
+  // Navbar link properties
+  ul
+    margin-right: 20%
+
+    li
+      margin: 0 2%
+
+  a
+    color: #ecf0f1
+    font-size: 125%
+    transition: color 0.2s
+
+  a:hover
+    color: #9b59b6
+    transition: color 0.3s
+
+
+// Base properties for the navbar logo & header
+.navbar-brand
+  position: relative
+  text-align: center
+  margin-left: 32%
+
+  .navbarLogo
+    opacity: 0.75
+    height: 64px
+    width: 64px
+
+  .navbarHeading
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 1rem
+
+
+// Prevent toggler outline from rendering
+.toggler-custom:focus, .toggler-custom:active
+  outline: 0
+
+
+// Base properties for the toggler menu
+.toggler-custom
+  span
+    display: block
+    background-color: #ecf0f1
+    height: 3px
+    width: 25px
+    margin: 4px 0
+    position: relative
+    border-radius: 20%
+    transition: all 0.2s
+    right: 5%
+
+  // Properties for the toggler in the 'initial'(collapsed) state
+  span:nth-child(1)
+    -webkit-transform: rotate(0)
+    -moz-transform: rotate(0)
+    transform: rotate(0)
+
+  span:nth-child(2)
+    opacity: 1
+    filter: alpha(opacity=100)
+
+
+  span:nth-child(3)
+    -webkit-transform: rotate(0)
+    -ms-transform: rotate(0)
+    transform: rotate(0)
+
+
+// Properties for the toggler in the 'x' state
+.toggler-custom:not(.collapsed)
+  span:nth-child(1)
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    transform: rotate(45deg)
+    -webkit-transform-origin: 10% 10%
+    -moz-transform-origin: 10% 10%
+    transform-origin: 10% 10%
+
+  span:nth-child(2)
+    opacity: 0.0
+    filter: alpha(opacity=0)
+
+  span:nth-child(3)
+    -webkit-transform: rotate(-45deg)
+    -moz-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    -webkit-transform-origin: 10% 90%
+    -moz-transform-origin: 10% 90%
+    transform-origin: 10% 90%
+
+
+// Navbar properties specific to small sized screens (phones)
+@media all and (max-width: 750px)
+  .navbar-brand
+    margin: auto
+
+
+// Navbar properties for intermediate sized screens (tablets)
+@media all and (min-width: 750px)
+  .navbar-brand
+    .navbarHeading
+      font-size: 1.5rem
+
+
+// Navbar properties when the screen size is large (desktop screens)
+@media all and (min-width: 1400px)
+  .navbar-custom
+    height: 75px
+    transition: height 0.75s
+    -webkit-transition: height 0.75s
+
+    .navbarLogo
+      opacity: 0.6
+      transition: opacity 0.75s
+      -webkit-transition: 0.75s
+
+    .navbarHeading
+      transition: opacity 0.75s
+      -webkit-transition: opacity 0.75s
+
+  // Behaviors that apply when users hover over the navbar on large screens
+  .navbar-custom:hover
+    height: 134px
+    transition: height 0.4s
+    -webkit-transition: height 0.4s
+
+    .navbarLogo
+      opacity: 0.85
+      transition: opacity 0.4s, height 0.4s, width 0.4s
+      -webkit-transition: opacity 0.4s, height 0.4s, width 0.4s
+      height: 128px
+      width: 128px
+
+    .navbarHeading
+      opacity: 0.0
+      transition: opacity 0.4s
+      -webkit-transition: opacity 0.4s
+

@@ -9,14 +9,114 @@
     <!-- tab icon here -->
     <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon.ico"/>
     <!-- stylesheet imports -->
-        <!-- vendor imports -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- vendor imports -->
+    <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="vendors/animatecss/animate.css" rel="stylesheet">
+    <!-- custom imports -->
+    <link href="stylesheets/compiled/custom.css" rel="stylesheet">
+    <link href="stylesheets/compiled/profile.css" rel="stylesheet">
+    <link href="stylesheets/compiled/navbar.css" rel="stylesheet">
 </head>
 <body>
     <!-- script imports -->
-        <!-- vendor imports -->
-        <script src="vendor/jquery/jquery-3.3.1.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <!-- vendor scripts -->
+    <script src="vendors/jquery/jquery-3.3.1.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/handlebars/handlebars-v4.0.11.js"></script>
+    <!-- custom scripts -->
+    <script src="scripts/enums.js"></script>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/brotherdata/classes/alphaclassdata.js"></script>
+    <script src="scripts/brotherdata/classes/gammaclassdata.js"></script>
+    <script src="scripts/brotherdata/classes/deltaclassdata.js"></script>
+    <script src="scripts/brotherdata/classes/zetaclassdata.js"></script>
+    <script src="scripts/brotherdata/classes/etaclassdata.js"></script>
+    <script src="scripts/brotherdata/brothersdata.js"></script>
+    <script src="scripts/brotherspage.js"></script>
+    <!-- template imports -->
+    <script src="templates/compiled/profile.min.js"></script>
+    <script src="templates/compiled/detailedprofile.min.js"></script>
+    <script src="templates/compiled/navbar.min.js"></script>
+        <script>
+            renderTemplate('navbar', 'body');
+            // Tasks that need to be executed on page load
+            $(document).ready(function () {
+                renderProfiles(SEARCHSTATE.current);
+                engageProfileListeners();
+            })
+        </script>
+    <!-- begin page html -->
+    <!-- page banner -->
+    <div class="page-banner">
+        <img class="banner-image" src="images/pagebanners/brotherspagebanner.jpg" alt="Sigma Omega Brothers">
+    </div>
+    <!-- search tools -->
+    <div class="brosearch-tools container-fluid">
+        <div class="row">
+            <h2 class="search-header col-12">Search Tools</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">
+                <!-- brother search field -->
+                <form class="" role="search">
+                    <div class="input-group add-on">
+                        <input class="form-control" placeholder="Search Brothers..." name="brosearch" id="brosearch"
+                               type="text" onkeyup="" >
+                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+                <!-- preset search buttons -->
+                <div class="search-buttons btn-group" role="group" aria-label="Preset Brother Searches">
+                    <button type="radio" class="btn btn-secondary"
+                            onclick="">Alumni</button>
+                    <button type="radio" class="btn btn-secondary"
+                            onclick="">Co-op</button>
+                    <button type="radio" class="btn btn-secondary"
+                            onclick="">Current</button>
+                    <button type="radio" class="btn btn-secondary"
+                            onclick="">Executive Committee</button>
+                    <div class="btn-group" role="group">
+                        <button type="radio" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Major</button>
+                        <div class="dropdown-menu" aria-labelledby="Search by Major">
+                            <a class="dropdown-item" href="" onclick="">Accounting</a>
+                            <a class="dropdown-item" href="" onclick="">Finance</a>
+                        </div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="radio" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Class</button>
+                        <div class="dropdown-menu" aria-labelledby="Search by Class">
+                            <a class="dropdown-item" href=""
+                               onclick="">Charter</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Alpha</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Beta</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Gamma</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Delta</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Epsilon</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Zeta</a>
+                            <a class="dropdown-item" href=""
+                               onclick="">Eta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- profile rendering region -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg container" role="document">
+        </div>
+    </div>
 </body>
 </html>

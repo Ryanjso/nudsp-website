@@ -20,3 +20,22 @@ const alyssaWilson = {
     funFact: "In high school, I was voted both \"most likely to succeed\" and \"most likely to fall at graduation,\" " +
     "and that's pretty much all you need to know about me."
 };
+
+const jamesHe = {
+    firstName: "James",
+    lastName: "He",
+    class: BCLASS.delta,
+    status: STATUS.active,
+    ecPosition: null,
+    gradYear: 2020,
+    birthday: new Date(0, 1, 31),
+    majors: ["Finance"],
+    minors: [],
+    coops: [{company: "GMO", location: "Boston, Massachusetts", position: "Pricing Analyst"}],
+     studyAbroads: ["Barcelona, Spain"],
+    origin: "Shrewsbury MA, United States",
+    hobbies: ["Basketball", "Piano", "Traveling"],
+    favColor: "red",
+    dreamJob: "Investment Manager",
+    funFact: "I was born in San Antonio, Texas. I also have a younger brother who is attending Northeastern. "
+};

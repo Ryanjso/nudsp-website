@@ -19,6 +19,25 @@ const bethCohen = {
     funFact: "My happy place is the beach!"
 };
 
+const feliciaZhang = {
+    firstName: "Felicia",
+    lastName: "Zhang",
+    class: BCLASS.zeta,
+    status: STATUS.active,
+    ecPosition: null,
+    gradYear: 2021,
+    birthday: new Date(0, 1, 21),
+    majors: ["Finance"],
+    minors: [],
+    coops: [],
+    studyAbroads: ["Lyon, France", "Copenhagen, Denmark"],
+    origin: "Portland OR, United States",
+    hobbies: ["Watching TV", "Playing piano", "Driving"],
+    favColor: "black",
+    dreamJob: "Being a dancer at Boston Ballet",
+    funFact: "Rollercoasters are my favorite things in the world"
+};
+
 const michaelAmbrozia = {
     firstName: "Michael",
     lastName: "Ambrozia",

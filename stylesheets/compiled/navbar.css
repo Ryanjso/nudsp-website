@@ -4,37 +4,46 @@
   overflow: hidden;
   background-color: #2c3e50;
   color: #ecf0f1;
-  font-family: 'Playfair Display SC', Serif;
-  z-index: 1; }
-  .navbar-custom ul {
-    margin-right: 20%; }
-    .navbar-custom ul li {
-      margin: 0 2%; }
-  .navbar-custom a {
-    color: #ecf0f1;
-    font-size: 125%;
-    transition: color 0.2s; }
-  .navbar-custom a:hover {
-    color: #9b59b6;
-    transition: color 0.3s; }
+  font-family: "Playfair Display SC", Serif;
+  z-index: 1;
+}
+.navbar-custom ul {
+  margin-right: 20%;
+}
+.navbar-custom ul li {
+  margin: 0 2%;
+}
+.navbar-custom a {
+  color: #ecf0f1;
+  font-size: 125%;
+  transition: color 0.2s;
+}
+.navbar-custom a:hover {
+  color: #9b59b6;
+  transition: color 0.3s;
+}
 
 .navbar-brand {
   position: relative;
   text-align: center;
-  margin-left: 32%; }
-  .navbar-brand .navbarLogo {
-    opacity: 0.75;
-    height: 64px;
-    width: 64px; }
-  .navbar-brand .navbarHeading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1rem; }
+  margin-left: 32%;
+}
+.navbar-brand .navbarLogo {
+  opacity: 0.75;
+  height: 64px;
+  width: 64px;
+}
+.navbar-brand .navbarHeading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
 
 .toggler-custom:focus, .toggler-custom:active {
-  outline: 0; }
+  outline: 0;
+}
 
 .toggler-custom span {
   display: block;
@@ -45,21 +54,22 @@
   position: relative;
   border-radius: 20%;
   transition: all 0.2s;
-  right: 5%; }
-
+  right: 5%;
+}
 .toggler-custom span:nth-child(1) {
   -webkit-transform: rotate(0);
   -moz-transform: rotate(0);
-  transform: rotate(0); }
-
+  transform: rotate(0);
+}
 .toggler-custom span:nth-child(2) {
   opacity: 1;
-  filter: alpha(opacity=100); }
-
+  filter: alpha(opacity=100);
+}
 .toggler-custom span:nth-child(3) {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
-  transform: rotate(0); }
+  transform: rotate(0);
+}
 
 .toggler-custom:not(.collapsed) span:nth-child(1) {
   -webkit-transform: rotate(45deg);
@@ -67,51 +77,64 @@
   transform: rotate(45deg);
   -webkit-transform-origin: 10% 10%;
   -moz-transform-origin: 10% 10%;
-  transform-origin: 10% 10%; }
-
+  transform-origin: 10% 10%;
+}
 .toggler-custom:not(.collapsed) span:nth-child(2) {
-  opacity: 0.0;
-  filter: alpha(opacity=0); }
-
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
 .toggler-custom:not(.collapsed) span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transform-origin: 10% 90%;
   -moz-transform-origin: 10% 90%;
-  transform-origin: 10% 90%; }
+  transform-origin: 10% 90%;
+}
 
 @media all and (max-width: 750px) {
   .navbar-brand {
-    margin: auto; } }
-
+    margin: auto;
+  }
+}
 @media all and (min-width: 750px) {
   .navbar-brand .navbarHeading {
-    font-size: 1.5rem; } }
-
+    font-size: 1.5rem;
+  }
+}
 @media all and (min-width: 1400px) {
   .navbar-custom {
     height: 75px;
     transition: height 0.75s;
-    -webkit-transition: height 0.75s; }
-    .navbar-custom .navbarLogo {
-      opacity: 0.6;
-      transition: opacity 0.75s;
-      -webkit-transition: 0.75s; }
-    .navbar-custom .navbarHeading {
-      transition: opacity 0.75s;
-      -webkit-transition: opacity 0.75s; }
+    -webkit-transition: height 0.75s;
+  }
+  .navbar-custom .navbarLogo {
+    opacity: 0.6;
+    transition: opacity 0.75s;
+    -webkit-transition: 0.75s;
+  }
+  .navbar-custom .navbarHeading {
+    transition: opacity 0.75s;
+    -webkit-transition: opacity 0.75s;
+  }
+
   .navbar-custom:hover {
     height: 134px;
     transition: height 0.4s;
-    -webkit-transition: height 0.4s; }
-    .navbar-custom:hover .navbarLogo {
-      opacity: 0.85;
-      transition: opacity 0.4s, height 0.4s, width 0.4s;
-      -webkit-transition: opacity 0.4s, height 0.4s, width 0.4s;
-      height: 128px;
-      width: 128px; }
-    .navbar-custom:hover .navbarHeading {
-      opacity: 0.0;
-      transition: opacity 0.4s;
-      -webkit-transition: opacity 0.4s; } }
+    -webkit-transition: height 0.4s;
+  }
+  .navbar-custom:hover .navbarLogo {
+    opacity: 0.85;
+    transition: opacity 0.4s, height 0.4s, width 0.4s;
+    -webkit-transition: opacity 0.4s, height 0.4s, width 0.4s;
+    height: 128px;
+    width: 128px;
+  }
+  .navbar-custom:hover .navbarHeading {
+    opacity: 0;
+    transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */

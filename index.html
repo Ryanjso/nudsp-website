@@ -1,4 +1,4 @@
-<!-- Serves at the website's homepage and main entry point -->
+!-- Serves at the website's homepage and main entry point -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- tab title here -->
-    <title>Sigma Omega</title>
+    <title>Delta Sigma Pi - &Sigma;&Omega;</title>
     <!-- tab icon here -->
     <link rel="shortcut icon" type="image/x-icon"
           href="images/icons/favicon.ico"/>
@@ -17,6 +17,7 @@
     <!-- custom imports-->
     <link href="stylesheets/compiled/navbar.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/compiled/landingcarousel.css">
+    <link rel="stylesheet" href="stylesheets/compiled/custom.css">
 </head>
 <body>
     <!-- script imports -->
@@ -28,8 +29,8 @@
     <script src="scripts/utility.js"></script>
     <script src="scripts/landingcarousel.js"></script>
     <!-- template imports -->
-    <script src="templates/compiled/navbar.min.js"></script>
-    <script src="templates/compiled/birthdayslide.min.js"></script>
+    <script src="templates/compiled/navbar.tmpl.js"></script>
+    <script src="templates/compiled/birthdayslide.tmpl.js"></script>
     <script>
         renderTemplate('navbar', 'body');
         // document.ready calls are checks/processes that can only be executed when the html for this page is loaded
@@ -40,34 +41,52 @@
     </script>
 
     <!-- begin page html -->
-    <!-- the background carousel that appears on the on the homepage (area of revolving backgrounds) -->
-    <div id="landing-carousel" class="carousel slide fixed-top" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <!-- for each additional slide added, add a carousel indicator -->
-            <li class="primary-indicator active" data-target="#landing-carousel" data-slide-to="0"></li>
-        </ol>
-        <div class="carousel-slides carousel-inner">
-            <!-- this intro-slide must always be here -->
-            <div class="carousel-item active intro-slide">
-                <div class="slide-content">
-                    <h1 class="intro-title">Delta Sigma Pi - Sigma Omega Chapter</h1>
-                    <hr>
-                    <p class="intro-subtitle">
-                        Delta Sigma Pi is the world's foremost professional fraternity with over 300,000 members nation
-                        wide. Sigma Omega is the branch of Delta Sigma Pi that represents Northeastern University
-                    </p>
+    <div class="container-fluid">
+        <div id="landing-section" class="row section">
+            <!-- background carousel that appears on the on the homepage (area of revolving backgrounds) -->
+            <div id="landing-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <!-- for each additional slide added, add a carousel indicator -->
+                    <li class="primary-indicator active" data-target="#landing-carousel" data-slide-to="0"></li>
+                </ol>
+                <div class="carousel-slides carousel-inner">
+                    <!-- this intro-slide must always be here -->
+                    <div class="carousel-item active intro-slide">
+                        <div class="slide-content">
+                            <h1 class="intro-title">Delta Sigma Pi - Sigma Omega Chapter</h1>
+                            <hr>
+                            <p class="intro-subtitle">
+                                Delta Sigma Pi is the world's foremost professional fraternity with over 300,000 members nation
+                                wide. Sigma Omega is the branch of Delta Sigma Pi that represents Northeastern University
+                            </p>
+                        </div>
+                    </div>
+                    <!-- all additional slides here -->
                 </div>
+                <a class="carousel-control-prev" href="#landing-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#landing-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <!-- all additional slides here -->
         </div>
-        <a class="carousel-control-prev" href="#landing-carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#landing-carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <!-- about section that appears on the homepage -->
+        <div id="about-section" class="row section">
+            <div class="buttons-section">
+                <button type="button" class="btn btn-primary">Find Out More</button>
+                <button type="button" class="btm btn-primary">Join Us</button>
+            </div>
+        </div>
+        <!-- events section that appears on the homepage -->
+        <div id="events-section" class="row section">
+            <div class="buttons-section">
+                <button type="button" class="btn btn-primary">See More Events</button>
+                <button type="button" class="btm btn-primary">Recruitment Events</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

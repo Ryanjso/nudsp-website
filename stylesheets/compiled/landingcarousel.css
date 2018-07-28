@@ -1,13 +1,14 @@
 /* Provides the styling for the landing page backgrounds & content */
 /* General styling information for the carousel */
 #landing-carousel {
-  z-index: -1; }
+  z-index: -1;
+}
 
 .carousel-item {
   height: 100vh;
   width: 100vw;
-  opacity: 0.8;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .slide-content {
   height: inherit;
@@ -18,26 +19,34 @@
   flex-direction: column;
   text-align: center;
   color: #ecf0f1;
-  font-family: 'Playfair Display SC', Serif; }
+  font-family: "Playfair Display SC", Serif;
+}
 
 /* Styling data for all the slides that exist in the carousel */
 .intro-slide {
-  background: url("../../images/backgrounds/bostonaerialview.jpg");
-  background-size: cover; }
-  .intro-slide .intro-subtitle {
-    width: 50vw;
-    margin-bottom: 0; }
+  background: url("../../images/backgrounds/bostonaerialviewopaque.jpg");
+  background-size: cover;
+}
+.intro-slide .intro-subtitle {
+  width: 50vw;
+  margin-bottom: 0;
+}
 
 .birthday-slide {
-  background-color: #ecf0f1; }
-  .birthday-slide .background-video {
-    display: block;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.8; }
-  .birthday-slide .birthday-message {
-    z-index: 1; }
+  background-color: #ecf0f1;
+}
+.birthday-slide .background-video {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.8;
+}
+.birthday-slide .birthday-message {
+  z-index: 1;
+}
+
+/*# sourceMappingURL=landingcarousel.css.map */

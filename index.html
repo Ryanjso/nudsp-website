@@ -18,6 +18,8 @@
     <link href="stylesheets/compiled/navbar.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/compiled/landingcarousel.css">
     <link rel="stylesheet" href="stylesheets/compiled/custom.css">
+    <link rel="stylesheet" href="stylesheets/compiled/events.css">
+    <link rel="stylesheet" href="stylesheets/compiled/footer.css">
 </head>
 <body>
     <!-- script imports -->
@@ -31,17 +33,26 @@
     <!-- template imports -->
     <script src="templates/compiled/navbar.tmpl.js"></script>
     <script src="templates/compiled/birthdayslide.tmpl.js"></script>
+    <script src="templates/compiled/eventgrid.tmpl.js"></script>
+    <script src="templates/compiled/footer.tmpl.js"></script>
     <script>
         renderTemplate('navbar', 'body');
         // document.ready calls are checks/processes that can only be executed when the html for this page is loaded
         $(document).ready(function() {
             //checkBrotherBirthdays();
             clearIfSingle();
+            if (screen.width > 1200) {
+                renderTemplate('eventgrid', '.event-area', true);
+            }
+            else {
+                renderTemplate('eventlist', '.event-area', true);
+            }
+            renderTemplate('footer', 'body', true, true)
         });
     </script>
 
     <!-- begin page html -->
-    <div class="container-fluid">
+    <div class="container-fluid  homepage-container">
         <div id="landing-section" class="row section">
             <!-- background carousel that appears on the on the homepage (area of revolving backgrounds) -->
             <div id="landing-carousel" class="carousel slide" data-ride="carousel">
@@ -56,8 +67,9 @@
                             <h1 class="intro-title">Delta Sigma Pi - Sigma Omega Chapter</h1>
                             <hr>
                             <p class="intro-subtitle">
-                                Delta Sigma Pi is the world's foremost professional fraternity with over 300,000 members nation
-                                wide. Sigma Omega is the branch of Delta Sigma Pi that represents Northeastern University
+                                <!--Delta Sigma Pi is the world's foremost professional fraternity with over 300,000 members nation
+                                wide. Sigma Omega is the branch of Delta Sigma Pi that represents Northeastern University-->
+                            <p style="font-weight: bold; color: red ; font-size: 18; opacity: 1">NOTE: This website is still under construction, this is not the finished product :)</p>
                             </p>
                         </div>
                     </div>
@@ -75,14 +87,20 @@
         </div>
         <!-- about section that appears on the homepage -->
         <div id="about-section" class="row section">
-            <div class="buttons-section">
+            <div class="buttons-section row">
                 <button type="button" class="btn btn-primary">Find Out More</button>
                 <button type="button" class="btm btn-primary">Join Us</button>
             </div>
         </div>
         <!-- events section that appears on the homepage -->
-        <div id="events-section" class="row section">
-            <div class="buttons-section">
+        <div id="events-section" class="container-fluid section">
+            <div class="row event-format-tools">
+
+            </div>
+            <div class="event-area row">
+
+            </div>
+            <div class="buttons-section row">
                 <button type="button" class="btn btn-primary">See More Events</button>
                 <button type="button" class="btm btn-primary">Recruitment Events</button>
             </div>

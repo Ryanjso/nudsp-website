@@ -1,5 +1,9 @@
 /* This file contains all of the custom style information for the website */
 /* Styling for the homepage */
+.construction-message {
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
 .homepage-container {
   padding: 0;
 }

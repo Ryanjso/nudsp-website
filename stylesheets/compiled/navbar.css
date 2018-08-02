@@ -13,6 +13,9 @@
 .navbar-custom ul li {
   margin: 0 2%;
 }
+.navbar-custom ul .rush-link {
+  width: 175px;
+}
 .navbar-custom a {
   color: #ecf0f1;
   font-size: 125%;

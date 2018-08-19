@@ -41,4 +41,11 @@ html {
   padding: 2% 0 1% 0;
 }
 
+/* Styling for the recruitment page */
+#jenn-professional {
+  height: 20%;
+  width: 20%;
+  border-radius: 100%;
+}
+
 /*# sourceMappingURL=custom.css.map */

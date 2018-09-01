@@ -1,20 +1,36 @@
 /* This file contains all of the custom style information for the website */
 /* Styling for the homepage */
-.construction-message {
-  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+#landing-section #landing-carousel {
+  width: 100%;
 }
-
-.homepage-container {
+#landing-section #landing-carousel .opening-letters {
+  display: inline-block;
+  font-size: 20vw;
+  font-weight: bold;
+  letter-spacing: 3vw;
+  font-family: "Serif";
+  line-height: 18vw;
+  border-bottom: solid 2px white;
+  border-top: solid 2px white;
+  padding: 3vw 0 3vw 3vw;
+}
+#landing-section #landing-carousel .opening-statement {
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+#landing-section #landing-carousel .homepage-container {
   padding: 0;
 }
 
 #about-section {
   height: 400px;
   background-color: #2c3e50;
+  width: 100%;
 }
 
 #events-section {
   height: 600px;
+  width: 100%;
 }
 
 /* Styling for the brother's page */

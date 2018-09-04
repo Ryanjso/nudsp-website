@@ -4,4 +4,101 @@ body {
   font-size: 110%;
 }
 
+.flyer {
+  background-image: url(../../images/recruitment-flyer.png);
+  background-size: 100% auto;  
+  height: 900px;
+  width: 700px;
+  background-repeat: no-repeat;
+}
+
+.mini-j-headshot {
+  background-image: url(../../images/headshots/vppejenn.jpg);
+  background-size: 150%;
+  background-position-x: -25px;
+  background-position-y: -25px;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px; 
+}
+
+
+.signlink {
+  text-decoration: none;
+  background-color: #a0d7cb;
+  border-radius: 20vw;
+  padding: 0.3em 2em;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  margin: 10px 0;
+}
+
+.signlink:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+.recruit-head {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: 600;
+}
+
+
+.flyer-display {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+
+}
+
+hr {
+  width: 60%;
+}
+
+li {
+  color: gray;
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+
+.list-div {
+display: flex;
+justify-content: center;
+}
+
+.head-cent {
+  text-align: center;
+}
+
+.photo-name {
+  display: flex;
+  justify-content: center;
+}
+
+.text-body {
+  width: 80%;
+}
+
+video {
+  padding-bottom: 60px;
+}
+
+.pic {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.space {
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=recruitment.css.map */
